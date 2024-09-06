@@ -102,3 +102,6 @@ SSH_Command
 # -N: Indica que nenhuma operação de comando ou shell será executada após a conexão. Este modo é usado quando você só quer abrir o túnel sem interagir diretamente com o servidor remoto.
 
 # Esses parâmetros combinados configuram um túnel SSH seguro (via proxy SOCKS) que comprime os dados transferidos, sem executar comandos no servidor remoto após a conexão.
+
+========================================================================================
+# proxy SOCKS
