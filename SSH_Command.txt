@@ -85,8 +85,20 @@ Stop-Service -Name sshd
 ssh PC@192.168.0.116
 # Set-Service -Name sshd -StartupType Automatic
 
+========================================================================================
+
 scp linuxlite@192.168.0.145:~/Desktop/SSH_Command "C:/Users/PC/Desktop/app"
 linuxlite@192.168.0.145's password:linuxlite
 SSH_Command
 
 ========================================================================================
+
+# Aqui está uma explicação sobre as opções usadas no comando ssh:
+
+# -D: Este parâmetro configura o SSH para atuar como um proxy SOCKS (nesse caso, escutando na porta 1337). Ele redireciona o tráfego da máquina local através da conexão SSH, útil para criar um túnel seguro para navegação ou outros serviços de rede.
+
+# -C: Ativa a compressão de dados, o que pode acelerar a transferência de arquivos em redes lentas, mas o ganho pode ser imperceptível em redes rápidas.
+
+# -N: Indica que nenhuma operação de comando ou shell será executada após a conexão. Este modo é usado quando você só quer abrir o túnel sem interagir diretamente com o servidor remoto.
+
+# Esses parâmetros combinados configuram um túnel SSH seguro (via proxy SOCKS) que comprime os dados transferidos, sem executar comandos no servidor remoto após a conexão.
